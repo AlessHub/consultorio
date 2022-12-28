@@ -12,7 +12,7 @@
                     Name
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="name" value="<?php echo $v['name']?>">
+                    <input type="text" class="form-control" name="name" value="<?php echo $v['name']?>" required>
                 </div>
             </div>
             <div class="row mb-3">
@@ -20,7 +20,7 @@
                     Email
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="email" value="<?php echo $v['email']?>">
+                    <input type="text" class="form-control" name="email" value="<?php echo $v['email']?>" required>
                 </div>
             </div>
             <div class="row mb-3">
@@ -28,7 +28,7 @@
                     Reason
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="reason" value="<?php echo $v['reason']?>">
+                    <input type="text" class="form-control" name="reason" value="<?php echo $v['reason']?>" required>
                 </div>
             </div>
             <div class="row mb-3">

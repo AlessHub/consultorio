@@ -9,14 +9,15 @@ class Appointment {
     }
   
     public function insert($table, $data) {
-      $consult = "INSERT INTO " . $table . " (name, email, reason)" .
-      " VALUES ($data)";
-      $result=$this->db->query($consult);
-      if ($result){
-        return true;
-      }else{
-        return false;
-      }
+    global $errorMessage;
+    $consult = "INSERT INTO " . $table . " (name, email, reason)" .
+    " VALUES ($data)";
+    $result=$this->db->query($consult);
+    if ($result){
+      return true;
+    }else{
+      return false;
+    }
     }
 
     public function delete($table, $condition) {
@@ -48,5 +49,3 @@ class Appointment {
     }
   }
   }
-  
-  ?>

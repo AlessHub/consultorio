@@ -3,12 +3,23 @@
 <div class="container my-5">
         <h2>New Appointment</h2>
         <form method="get">
+        <div id="alert-container"></div>
+        <?php
+        if (!empty($errorMessage)) {
+            echo "
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>$errorMessage</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
+        }
+        ?>
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">
                     Name
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="form-control" name="name" required>
                 </div>
             </div>
             <div class="row mb-3">
@@ -16,7 +27,7 @@
                     Email
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="email">
+                    <input type="text" class="form-control" name="email" required>
                 </div>
             </div>
             <div class="row mb-3">
@@ -24,7 +35,7 @@
                     Reason
                 </label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="reason">
+                    <input type="text" class="form-control" name="reason" required>
                 </div>
             </div>
             <div class="row mb-3">
